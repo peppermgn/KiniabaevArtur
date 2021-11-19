@@ -1,0 +1,138 @@
+.header {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    justify-content: left;
+}
+
+nav{
+    position: center;
+    text-align:center;
+    width: 100%;
+    float: right;
+    font-size: 25px;
+    justify-items: flex-end;
+}
+
+.img-logo{
+    width: 15%;
+    height: 50%;
+    margin: 20px 20px 20px 20px;
+}
+.main{
+    margin: 20px 20px 20px 20px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: cadetblue;
+    margin: 20px 20px 20px 20px;
+    display: block;
+    height: 150px;
+}
+
+.right {
+    width: 80%;
+    float: left;
+}
+
+.left {
+    width: 19%;
+    float: left;
+    margin-right: 1%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    background-color: chartreuse;
+    margin: 20px 20px 20px 20px;
+}
+
+.tw {
+    background-color: burlywood;
+}
+
+.hobby {
+    width: 35%;
+    float: left;
+    margin-right: 20px;
+}
+
+.review {
+    width: 35%;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a:hover {
+    background-size: 100% 2px;
+}
+
+.container-flex{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.block-one, .block-two, .block-three, .block-four {
+    padding: 40px;
+    width: fit-content;
+    height: fit-content;
+}
+.img-block, .grid-photo{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 5px #ccc solid;
+    box-shadow: 0 0 10px #444;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.img-block:hover, .grid-photo:hover {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.text-block, .grid-text{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    justify-content: center;
+}
+
+.grid-block-one, .grid-block-two, .grid-block-three, .grid-block-four{
+    padding: 10px;
+    border: 1px solid black;
+}
+
