@@ -2,11 +2,8 @@
 
 $now_hours = date("H");
 $now_minuts = date("i");
-var_dump($now_hours);
-var_dump($now_minuts);
 
 //Необходимо подгружать на страницу с 8 до 20.00 - дневная тема (светлый цвет) и с 20.01 до 7.59 - ночную тему (темный фон).
-
 
 if ($now_hours >= 8 && $now_hours <= 20)
 {
