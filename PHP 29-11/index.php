@@ -5,26 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 <body class="body">
+
 <?php
 include 'header.php';
-
 ?>
 
-
-<main class="main-<?php echo $time; ?>">
-
+<?
+$text = '<main class="main-' . $time . '">
     <div class="main-grid">
         <div class="main-image">
-            <img class="main-photo" src="/img/photo.jpg" alt="My photo" title="My photo">
+            <img class="main-photo" src="img/photo.jpg" alt="My photo" title="My photo">
         </div>
         <div class="main-name">
             <h2>Киньябаев Артур</h2>
         </div>
-        <div class="main-hobby">
+        <div class="main-hobby" id="functionMain">
             <h3>Увлечения</h3>
             <p>Увлечений не так уж и много: люблю воллейбол, компьютерные игры, хорошие фильмы. Сериалы особо не смотрю, потому что может затянуть и вообще забью на все остальное))</p>
         </div>
@@ -35,7 +34,7 @@ include 'header.php';
     </div>
 
 
-    <div class="eu1-grid <?php echo $time; ?>" >
+    <div class="eu1-grid ' . $time . '" >
         <div class="box box1">
             <div class="img-block"><img src="/img/eu1.jpg" alt="eu1" title="eu1"></div>
             <br>
@@ -65,7 +64,7 @@ include 'header.php';
         </div>
     </div>
 
-    <div class="container-grid <?php echo $time; ?>">
+    <div class="container-grid ' . $time . '">
         <div class="grid-block-one">
             <div class="grid-photo"><img src="/img/eu5.jpg" alt="eu5" title="eu5" style="position: center"></div>
             <br>
@@ -90,9 +89,25 @@ include 'header.php';
             <br>
             <div class="grid-text">Эублефары не ночные животные, а сумеречные. Они наиболее активны рано утром на расходе солнца и вечером. Когда хозяева собираются на работу, и когда возвращаются домой эублефары готовы к общению. Ночью и днем эублефары предпочитают отдыхать. Впрочем, они легко могут подстраиваться под ритм человека и будут наиболее активны тогда, когда их кормят и общаются с ними.</div>
         </div>
-
     </div>
-</main>
+</main>';
+
+    echo $text;
+
+    $wordCount = explode(" ", strip_tags($text));
+
+    $vowelsCount = strlen(implode( '', preg_replace('/[^бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ]/', '', $wordCount)));
+
+    $daysAfterBirthday = date_diff(new \DateTime(), new \DateTime('1987-06-05'))->days;
+
+
+
+    echo 'Задание №2 - Количество гласных букв на странице: ' . $vowelsCount . '</br>';
+    echo 'Задание №3 - Всего слов на странице: ' . count($wordCount) . '</br>';
+    echo 'Задание №4 - Количество дней с даты рождения: ' . $daysAfterBirthday . ' дней' . '</br>';
+
+
+?>
 
 <?
 include "footer.php";
